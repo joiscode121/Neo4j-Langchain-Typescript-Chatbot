@@ -1,0 +1,87 @@
+= Movie Recommendation Chatbot
+
+This chatbot is powered by a *Neo4j* database and *GPT-4*, providing intelligent responses to movie-related queries. Built in *React* using *Next.js*, it leverages the *Neo4j Recommendations Dataset* to offer personalized movie recommendations based on user preferences.
+
+== What the Chatbot Can Do
+The chatbot is designed to answer various movie-related questions, such as:
+* _How many movies has Tom Hanks acted in?_
+* _What is the most popular movie in the database?_
+* _Can you recommend a movie for fans of The Matrix and Casino?_
+
+== Features
+* *Movie Data Queries*: Get information about actors, directors, and movies.
+* *Personalized Recommendations*: Receive movie suggestions based on similar movies, actors, or genres.
+* *Conversation History*: The chatbot maintains a history of previous questions for a seamless user experience.
+
+== Tech Stack
+* *Frontend*: React with Next.js
+* *Backend*: Node.js
+* *Database*: Neo4j
+* *AI Model*: GPT-4
+
+== Installation
+
+=== Prerequisites
+Before you start, make sure you have the following installed:
+* link:https://nodejs.org/en/[Node.js] (version 14.x or higher)
+* link:https://neo4j.com/[Neo4j] (version 4.x or higher)
+* link:https://www.npmjs.com/[npm] or link:https://yarnpkg.com/[Yarn]
+
+=== Steps
+. *Clone the Repository*
++
+[source,bash]
+----
+git clone https://github.com/yourusername/movie-recommendation-chatbot.git
+cd movie-recommendation-chatbot
+----
+
+. *Install Dependencies*
++
+[source,bash]
+----
+npm install
+----
+or
+[source,bash]
+----
+yarn install
+----
+
+. *Set Up Neo4j Database*
++
+* Install and run Neo4j locally or use link:https://neo4j.com/cloud/aura/[Neo4j Aura].
+* Import the _Recommendations Dataset_ into your Neo4j instance.
+* Update your connection details in the environment configuration file.
+
+. *Set Up Environment Variables*
++
+Create a `.env.local` file in the root directory and configure your environment variables:
++
+[source,bash]
+----
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=password
+OPENAI_API_KEY=your_openai_api_key
+----
+
+. *Run the Development Server*
++
+[source,bash]
+----
+npm run dev
+----
+or
+[source,bash]
+----
+yarn dev
+----
+
+. *Access the Chatbot*
++
+Open your browser and go to http://localhost:3000 to interact with the chatbot.
+
+== Future Enhancements
+* *More Complex Recommendations*: Extend the chatbot to make more sophisticated recommendations based on multiple criteria (actors, genres, ratings).
+* *Expanded Dataset*: Add more movies, actors, and directors to enrich the recommendations.
